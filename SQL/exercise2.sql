@@ -1,6 +1,6 @@
 -- Nivel de dificultad: Fácil
 -- 1. Crea una base de datos llamada "MiBaseDeDatos".
-CREATE DATABASE "MiBaseDeDatos"
+CREATE DATABASE "mibasededatos"
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -9,14 +9,14 @@ CREATE DATABASE "MiBaseDeDatos"
     IS_TEMPLATE = False;
 
 -- 2. Crea una tabla llamada "Usuarios" con las columnas: "id" (entero, clave primaria), "nombre" (texto) y "edad" (entero).
-CREATE TABLE public."Usuarios"
+CREATE TABLE public."usuarios"
 (
     id serial NOT NULL,
     name character varying(255) NOT NULL,
     age integer,
     PRIMARY KEY (id)
 );
-ALTER TABLE IF EXISTS public."Usuarios"
+ALTER TABLE IF EXISTS public."usuarios"
     OWNER to postgres;
 
 -- 3. Inserta dos registros en la tabla "Usuarios".
